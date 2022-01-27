@@ -1,3 +1,3 @@
 #! /bin/sh
 
-./Bin/Tests/UnitTests ;
+./Build/Tests/UnitTests ;

@@ -1,3 +1,4 @@
 #! /bin/sh
 
-make -C ./Bin ;
+make -C ./Build ;
+# cmake --build ./Build --target clean ;

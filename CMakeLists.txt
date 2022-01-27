@@ -12,6 +12,11 @@ set(SOURCES
     Src/Main.cpp
 )
 
+set(HEADERS
+    Include/Config.h.in
+    Include/SimpleClass.h
+)
+
 # wskazanie maina
 add_executable(${PROJECT_NAME} ${SOURCES})
 
@@ -56,7 +61,7 @@ if(ADD_NCURSES)
     find_package(Curses REQUIRED)
 
     list(APPEND EXTRA_INCLUDES ${CURSES_INCLUDE_DIR})
-    list(APPEND EXTRA_LINKS    ${CURSES_LIBRARIES})
+    list(APPEND EXTRA_LINKS    -lcdk -lmenu -lpanel -lncurses) #${CURSES_LIBRARIES}
 endif()
 
 if(ADD_BOOST)
@@ -79,6 +84,7 @@ if(ADD_OPENCV)
     list(APPEND EXTRA_INCLUDES ${OpenCV_INCLUDE_DIRS})
     list(APPEND EXTRA_LINKS    ${OpenCV_LIBS})
 endif()
+
 
 ############################################################
 # Target 
@@ -107,3 +113,5 @@ target_link_libraries(${PROJECT_NAME}
 ############################################################
 # Install
 ############################################################
+install(TARGETS ${PROJECT_NAME} DESTINATION bin)
+install(FILES   ${HEADERS}      DESTINATION include)

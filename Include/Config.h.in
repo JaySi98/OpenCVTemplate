@@ -1,7 +1,7 @@
 #define Template_VERSION_MAJOR @Template_VERSION_MAJOR@
 #define Template_VERSION_MINOR @Template_VERSION_MINOR@
 
-#cmakedefine ADD_GLFW
-#cmakedefine ADD_NCURSES
-#cmakedefine ADD_OPENCV
-#cmakedefine ADD_BOOST
+#define ADD_GLFW
+#define ADD_NCURSES
+#define ADD_OPENCV
+#define ADD_BOOST
