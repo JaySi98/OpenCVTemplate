@@ -5,3 +5,4 @@
 #define ADD_NCURSES
 #define ADD_OPENCV
 #define ADD_BOOST
+#define ADD_MYSQL

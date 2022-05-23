@@ -11,12 +11,10 @@ set(CMAKE_CXX_FLAGS -pthread)
 get_filename_component(PARENT_DIR ${PROJECT_SOURCE_DIR} DIRECTORY)
 
 set(SOURCES
-    ${PARENT_DIR}/Src/SimpleClass.cpp
     ${PARENT_DIR}/Include/Config.h.in
 )
 set(TESTS_SOURCES
     TestMain.cpp
-    TestSimpleClass.cpp
 )
 
 # GTest as a testing framework
